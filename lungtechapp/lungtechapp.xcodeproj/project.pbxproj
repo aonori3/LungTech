@@ -1,0 +1,634 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4B246BE2C75492600BEB8DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B246BD2C75492600BEB8DF /* ContentView.swift */; };
+		D4B246C02C75492700BEB8DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B246BF2C75492700BEB8DF /* Assets.xcassets */; };
+		D4B246C42C75492700BEB8DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B246C32C75492700BEB8DF /* Preview Assets.xcassets */; };
+		D4B246CE2C75492700BEB8DF /* lungtechappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B246CD2C75492700BEB8DF /* lungtechappTests.swift */; };
+		D4B246D82C75492700BEB8DF /* lungtechappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B246D72C75492700BEB8DF /* lungtechappUITests.swift */; };
+		D4B246DA2C75492700BEB8DF /* lungtechappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B246D92C75492700BEB8DF /* lungtechappUITestsLaunchTests.swift */; };
+		D4B246E92C7549A700BEB8DF /* LungTechApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B246E82C7549A700BEB8DF /* LungTechApp.swift */; };
+		D4B246EB2C7549C500BEB8DF /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B246EA2C7549C500BEB8DF /* ResultView.swift */; };
+		D4B246ED2C75929B00BEB8DF /* CoughClassifier.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = D4B246EC2C75929B00BEB8DF /* CoughClassifier.mlpackage */; };
+		D8A10EA92C77F67E009E3351 /* DocumentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A10EA82C77F67E009E3351 /* DocumentPickerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4B246CA2C75492700BEB8DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4B246B02C75492600BEB8DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4B246B72C75492600BEB8DF;
+			remoteInfo = lungtechapp;
+		};
+		D4B246D42C75492700BEB8DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4B246B02C75492600BEB8DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4B246B72C75492600BEB8DF;
+			remoteInfo = lungtechapp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D4B246B82C75492600BEB8DF /* lungtechapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lungtechapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4B246BD2C75492600BEB8DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D4B246BF2C75492700BEB8DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4B246C12C75492700BEB8DF /* lungtechapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lungtechapp.entitlements; sourceTree = "<group>"; };
+		D4B246C32C75492700BEB8DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D4B246C92C75492700BEB8DF /* lungtechappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lungtechappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4B246CD2C75492700BEB8DF /* lungtechappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lungtechappTests.swift; sourceTree = "<group>"; };
+		D4B246D32C75492700BEB8DF /* lungtechappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lungtechappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4B246D72C75492700BEB8DF /* lungtechappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lungtechappUITests.swift; sourceTree = "<group>"; };
+		D4B246D92C75492700BEB8DF /* lungtechappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lungtechappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D4B246E82C7549A700BEB8DF /* LungTechApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LungTechApp.swift; sourceTree = "<group>"; };
+		D4B246EA2C7549C500BEB8DF /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		D4B246EC2C75929B00BEB8DF /* CoughClassifier.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = CoughClassifier.mlpackage; sourceTree = "<group>"; };
+		D8A10EA82C77F67E009E3351 /* DocumentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4B246B52C75492600BEB8DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4B246C62C75492700BEB8DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4B246D02C75492700BEB8DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4B246AF2C75492600BEB8DF = {
+			isa = PBXGroup;
+			children = (
+				D4B246BA2C75492600BEB8DF /* lungtechapp */,
+				D4B246CC2C75492700BEB8DF /* lungtechappTests */,
+				D4B246D62C75492700BEB8DF /* lungtechappUITests */,
+				D4B246B92C75492600BEB8DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4B246B92C75492600BEB8DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4B246B82C75492600BEB8DF /* lungtechapp.app */,
+				D4B246C92C75492700BEB8DF /* lungtechappTests.xctest */,
+				D4B246D32C75492700BEB8DF /* lungtechappUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4B246BA2C75492600BEB8DF /* lungtechapp */ = {
+			isa = PBXGroup;
+			children = (
+				D4B246E82C7549A700BEB8DF /* LungTechApp.swift */,
+				D4B246BD2C75492600BEB8DF /* ContentView.swift */,
+				D8A10EA82C77F67E009E3351 /* DocumentPickerView.swift */,
+				D4B246EA2C7549C500BEB8DF /* ResultView.swift */,
+				D4B246BF2C75492700BEB8DF /* Assets.xcassets */,
+				D4B246C12C75492700BEB8DF /* lungtechapp.entitlements */,
+				D4B246EC2C75929B00BEB8DF /* CoughClassifier.mlpackage */,
+				D4B246C22C75492700BEB8DF /* Preview Content */,
+			);
+			path = lungtechapp;
+			sourceTree = "<group>";
+		};
+		D4B246C22C75492700BEB8DF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D4B246C32C75492700BEB8DF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D4B246CC2C75492700BEB8DF /* lungtechappTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4B246CD2C75492700BEB8DF /* lungtechappTests.swift */,
+			);
+			path = lungtechappTests;
+			sourceTree = "<group>";
+		};
+		D4B246D62C75492700BEB8DF /* lungtechappUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D4B246D72C75492700BEB8DF /* lungtechappUITests.swift */,
+				D4B246D92C75492700BEB8DF /* lungtechappUITestsLaunchTests.swift */,
+			);
+			path = lungtechappUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4B246B72C75492600BEB8DF /* lungtechapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4B246DD2C75492700BEB8DF /* Build configuration list for PBXNativeTarget "lungtechapp" */;
+			buildPhases = (
+				D4B246B42C75492600BEB8DF /* Sources */,
+				D4B246B52C75492600BEB8DF /* Frameworks */,
+				D4B246B62C75492600BEB8DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lungtechapp;
+			productName = lungtechapp;
+			productReference = D4B246B82C75492600BEB8DF /* lungtechapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4B246C82C75492700BEB8DF /* lungtechappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4B246E02C75492700BEB8DF /* Build configuration list for PBXNativeTarget "lungtechappTests" */;
+			buildPhases = (
+				D4B246C52C75492700BEB8DF /* Sources */,
+				D4B246C62C75492700BEB8DF /* Frameworks */,
+				D4B246C72C75492700BEB8DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4B246CB2C75492700BEB8DF /* PBXTargetDependency */,
+			);
+			name = lungtechappTests;
+			productName = lungtechappTests;
+			productReference = D4B246C92C75492700BEB8DF /* lungtechappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D4B246D22C75492700BEB8DF /* lungtechappUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4B246E32C75492700BEB8DF /* Build configuration list for PBXNativeTarget "lungtechappUITests" */;
+			buildPhases = (
+				D4B246CF2C75492700BEB8DF /* Sources */,
+				D4B246D02C75492700BEB8DF /* Frameworks */,
+				D4B246D12C75492700BEB8DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4B246D52C75492700BEB8DF /* PBXTargetDependency */,
+			);
+			name = lungtechappUITests;
+			productName = lungtechappUITests;
+			productReference = D4B246D32C75492700BEB8DF /* lungtechappUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4B246B02C75492600BEB8DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					D4B246B72C75492600BEB8DF = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					D4B246C82C75492700BEB8DF = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = D4B246B72C75492600BEB8DF;
+					};
+					D4B246D22C75492700BEB8DF = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = D4B246B72C75492600BEB8DF;
+					};
+				};
+			};
+			buildConfigurationList = D4B246B32C75492600BEB8DF /* Build configuration list for PBXProject "lungtechapp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4B246AF2C75492600BEB8DF;
+			productRefGroup = D4B246B92C75492600BEB8DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4B246B72C75492600BEB8DF /* lungtechapp */,
+				D4B246C82C75492700BEB8DF /* lungtechappTests */,
+				D4B246D22C75492700BEB8DF /* lungtechappUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4B246B62C75492600BEB8DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B246C42C75492700BEB8DF /* Preview Assets.xcassets in Resources */,
+				D4B246C02C75492700BEB8DF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4B246C72C75492700BEB8DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4B246D12C75492700BEB8DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4B246B42C75492600BEB8DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B246BE2C75492600BEB8DF /* ContentView.swift in Sources */,
+				D8A10EA92C77F67E009E3351 /* DocumentPickerView.swift in Sources */,
+				D4B246EB2C7549C500BEB8DF /* ResultView.swift in Sources */,
+				D4B246E92C7549A700BEB8DF /* LungTechApp.swift in Sources */,
+				D4B246ED2C75929B00BEB8DF /* CoughClassifier.mlpackage in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4B246C52C75492700BEB8DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B246CE2C75492700BEB8DF /* lungtechappTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4B246CF2C75492700BEB8DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B246DA2C75492700BEB8DF /* lungtechappUITestsLaunchTests.swift in Sources */,
+				D4B246D82C75492700BEB8DF /* lungtechappUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4B246CB2C75492700BEB8DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4B246B72C75492600BEB8DF /* lungtechapp */;
+			targetProxy = D4B246CA2C75492700BEB8DF /* PBXContainerItemProxy */;
+		};
+		D4B246D52C75492700BEB8DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4B246B72C75492600BEB8DF /* lungtechapp */;
+			targetProxy = D4B246D42C75492700BEB8DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D4B246DB2C75492700BEB8DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D4B246DC2C75492700BEB8DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		D4B246DE2C75492700BEB8DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = lungtechapp/lungtechapp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"lungtechapp/Preview Content\"";
+				DEVELOPMENT_TEAM = K8D7XFC993;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ao.lungtechapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4B246DF2C75492700BEB8DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = lungtechapp/lungtechapp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"lungtechapp/Preview Content\"";
+				DEVELOPMENT_TEAM = K8D7XFC993;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ao.lungtechapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D4B246E12C75492700BEB8DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K8D7XFC993;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ao.lungtechappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lungtechapp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/lungtechapp";
+			};
+			name = Debug;
+		};
+		D4B246E22C75492700BEB8DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K8D7XFC993;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ao.lungtechappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lungtechapp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/lungtechapp";
+			};
+			name = Release;
+		};
+		D4B246E42C75492700BEB8DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K8D7XFC993;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ao.lungtechappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = lungtechapp;
+			};
+			name = Debug;
+		};
+		D4B246E52C75492700BEB8DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K8D7XFC993;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ao.lungtechappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = lungtechapp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4B246B32C75492600BEB8DF /* Build configuration list for PBXProject "lungtechapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4B246DB2C75492700BEB8DF /* Debug */,
+				D4B246DC2C75492700BEB8DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4B246DD2C75492700BEB8DF /* Build configuration list for PBXNativeTarget "lungtechapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4B246DE2C75492700BEB8DF /* Debug */,
+				D4B246DF2C75492700BEB8DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4B246E02C75492700BEB8DF /* Build configuration list for PBXNativeTarget "lungtechappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4B246E12C75492700BEB8DF /* Debug */,
+				D4B246E22C75492700BEB8DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4B246E32C75492700BEB8DF /* Build configuration list for PBXNativeTarget "lungtechappUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4B246E42C75492700BEB8DF /* Debug */,
+				D4B246E52C75492700BEB8DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4B246B02C75492600BEB8DF /* Project object */;
+}
