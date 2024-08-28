@@ -100,7 +100,7 @@ struct ContentView: View {
             .alert(isPresented: $showingInfo) {
                 Alert(
                     title: Text("About LungTech Screener"),
-                    message: Text("This app uses AI to analyze cough sounds and provide a preliminary screening for respiratory conditions. Remember, this is not a diagnostic tool and should not replace professional medical advice."),
+                    message: Text("This app uses AI to analyze cough sounds and provide a preliminary screening for respiratory conditions. This is not a diagnostic tool and should not replace professional medical advice."),
                     dismissButton: .default(Text("Got it!"))
                 )
             }
