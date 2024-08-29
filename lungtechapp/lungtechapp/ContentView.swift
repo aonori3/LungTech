@@ -44,7 +44,7 @@ struct ContentView: View {
                     .edgesIgnoringSafeArea(.all)
 
                 ScrollView {
-                    VStack(spacing: 30) {
+                    VStack(spacing: 40) {
                         LungTechLogo()
 
                         Text("Upload or record cough sounds to begin the screening.")
@@ -53,13 +53,13 @@ struct ContentView: View {
                             .multilineTextAlignment(.center)
                             .padding(.horizontal)
 
-                        HStack(spacing: 20) {
+                        HStack(spacing: 50) {
                             ActionButton(title: "Record", icon: "mic.fill", color: mainColor) {
                                 showingPermissionAlert = true
                             }
                             .disabled(isRecording || isProcessing)
 
-                            ActionButton(title: "Upload", icon: "arrow.up.doc.fill", color: secondaryColor) {
+                            ActionButton(title: "Upload", icon: "arrow.up.doc.fill", color: mainColor) {
                                 showingDocumentPicker = true
                             }
                             .disabled(isRecording || isProcessing)
@@ -79,8 +79,6 @@ struct ContentView: View {
                                 .foregroundColor(secondaryColor)
                                 .padding()
                         }
-
-                        Spacer()
 
                         DisclaimerView()
                     }
@@ -214,23 +212,28 @@ struct ActionButton: View {
     let icon: String
     let color: Color
     let action: () -> Void
-
+    
     var body: some View {
-        Button(action: action) {
+        Button(action: {
+            action()
+        }) {
             VStack {
-                Image(systemName: icon)
-                    .font(.system(size: 30))
+                Circle()
+                    .fill(color.opacity(0.1)) // Background color with opacity
+                    .frame(width: 120, height: 120) // Size of the button
+                    .overlay(
+                        Image(systemName: icon) // Icon inside the button
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 60, height: 60) // Size of the icon
+                            .foregroundColor(color) // Icon color
+                    )
+                
                 Text(title)
                     .font(.headline)
+                    .foregroundColor(color)
+                    .padding(.top, 10) // Space between icon and text
             }
-            .frame(width: 150, height: 150)
-            .background(color.opacity(0.1))
-            .foregroundColor(color)
-            .clipShape(RoundedRectangle(cornerRadius: 20))
-            .overlay(
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(color, lineWidth: 2)
-            )
         }
     }
 }
@@ -239,18 +242,18 @@ struct RecordingView: View {
     let countdown: Int
 
     var body: some View {
-        VStack {
+        VStack (spacing: 10){
             Text("Recording: \(countdown)s")
                 .font(.title2)
-                .foregroundColor(.orange)
+                .foregroundColor(.blue)
 
             Image(systemName: "waveform")
                 .font(.system(size: 50))
-                .foregroundColor(.orange)
+                .foregroundColor(.blue)
                 .opacity(Double.random(in: 0.5...1.0))  // Simulates animation
         }
         .padding()
-        .background(Color.orange.opacity(0.1))
+        .background(Color.white.opacity(0.1))
         .cornerRadius(15)
     }
 }

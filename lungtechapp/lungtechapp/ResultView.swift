@@ -17,7 +17,7 @@ struct ResultView: View {
             LinearGradient(gradient: Gradient(colors: [mainColor.opacity(0.1), Color.green.opacity(0.1)]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all)
             
-            VStack(spacing: 20) {
+            VStack(spacing: 50) {
                 Text("Your Result")
                     .font(.system(size: 36, weight: .bold, design: .rounded))
                     .foregroundColor(.primary)
