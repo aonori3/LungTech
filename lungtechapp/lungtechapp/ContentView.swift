@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var isProcessing = false
     @State private var showingInfo = false
     @State private var selectedTab = 0
+    @State private var showingPermissionAlert = false
 
     let mainColor = Color(red: 0.2, green: 0.5, blue: 0.8)
     let secondaryColor = Color(red: 0.3, green: 0.7, blue: 0.5)
@@ -24,7 +25,7 @@ struct ContentView: View {
                     Text("Screener")
                 }
                 .tag(0)
-            
+
             infoView
                 .tabItem {
                     Image(systemName: "info.circle.fill")
@@ -33,51 +34,62 @@ struct ContentView: View {
                 .tag(1)
         }
         .accentColor(mainColor)
+        .overlay(
+            Group {
+                if showingPermissionAlert {
+                    CustomPermissionAlert(isPresented: $showingPermissionAlert, onAllow: {
+                        startRecording()
+                    })
+                }
+            }
+        )
     }
-    
+
     var mainView: some View {
         NavigationView {
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [mainColor.opacity(0.1), secondaryColor.opacity(0.1)]), startPoint: .topLeading, endPoint: .bottomTrailing)
                     .edgesIgnoringSafeArea(.all)
-                
+
                 ScrollView {
                     VStack(spacing: 30) {
                         LungTechLogo()
-                        
+
                         Text("Upload or record a cough sample for preliminary screening.")
                             .font(.body)
                             .foregroundColor(.secondary)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal)
-                        
+
                         HStack(spacing: 20) {
-                            ActionButton(title: "Record", icon: "mic.fill", color: mainColor, action: startRecording)
-                                .disabled(isRecording || isProcessing)
-                            
+                            ActionButton(title: "Record", icon: "mic.fill", color: mainColor) {
+                                showingPermissionAlert = true
+                            }
+                            .disabled(isRecording || isProcessing)
+
                             ActionButton(title: "Upload", icon: "arrow.up.doc.fill", color: secondaryColor) {
                                 showingDocumentPicker = true
                             }
                             .disabled(isRecording || isProcessing)
                         }
-                        
+
                         if isRecording {
                             RecordingView(countdown: countdown)
                         }
-                        
+
                         if isProcessing {
                             ProcessingView()
                         }
-                        
+
                         if let segmentedFileURL = segmentedFileURL {
                             Text("File processed: \(segmentedFileURL)")
                                 .font(.caption)
                                 .foregroundColor(secondaryColor)
                                 .padding()
                         }
-                        
+
                         Spacer()
-                        
+
                         DisclaimerView()
                     }
                     .padding()
@@ -106,7 +118,7 @@ struct ContentView: View {
             }
         }
     }
-    
+
     var infoView: some View {
         NavigationView {
             List {
@@ -114,14 +126,14 @@ struct ContentView: View {
                     InfoRow(title: "What is COPD", value: "Chronic Obstructive Pulmonary Disease (COPD) is a chronic inflammatory lung disease that causes obstructed airflow from the lungs.")
                     InfoRow(title: "Symptoms", value: "Breathing difficulty, cough, mucus production and wheezing.")
                 }
-                
+
                 Section(header: Text("Risk Factors").foregroundColor(mainColor)) {
                     InfoRow(title: "Smoking", value: "Primary risk factor for COPD")
                     InfoRow(title: "Air Pollution", value: "Long-term exposure can contribute to COPD")
                     InfoRow(title: "Occupational Exposure", value: "Dusts and chemicals in certain workplaces")
                     InfoRow(title: "Genetics", value: "Some genetic factors may increase risk")
                 }
-                
+
                 Section(header: Text("When to See a Doctor").foregroundColor(mainColor)) {
                     InfoRow(title: "Consult a Professional", value: "If you experience persistent cough, shortness of breath, or any other symptoms of COPD.")
                 }
@@ -129,7 +141,7 @@ struct ContentView: View {
             .navigationTitle("COPD Information")
         }
     }
-    
+
     func startRecording() {
         isRecording = true
         countdown = 5
@@ -163,7 +175,7 @@ struct ContentView: View {
     func processAudioFile() {
         guard let selectedFileURL = selectedFileURL else { return }
         isProcessing = true
-        
+
         // Your existing processAudioFile logic here
         // ...
 
@@ -176,10 +188,50 @@ struct ContentView: View {
     }
 }
 
+struct CustomPermissionAlert: View {
+    @Binding var isPresented: Bool
+    var onAllow: () -> Void
+
+    var body: some View {
+        ZStack {
+            Color.black.opacity(0.4)
+                .edgesIgnoringSafeArea(.all)
+
+            VStack(spacing: 20) {
+                Text("\"LungTech\" Would Like to Access the Microphone")
+                    .font(.headline)
+                    .multilineTextAlignment(.center)
+
+                Text("LungTech needs microphone access to record cough samples for analysis.")
+                    .font(.body)
+                    .multilineTextAlignment(.center)
+
+                HStack(spacing: 20) {
+                    Button("Don't Allow") {
+                        isPresented = false
+                    }
+                    .foregroundColor(.blue)
+
+                    Button("OK") {
+                        isPresented = false
+                        onAllow()
+                    }
+                    .foregroundColor(.blue)
+                    .fontWeight(.bold)
+                }
+            }
+            .padding()
+            .background(Color(UIColor.systemBackground))
+            .cornerRadius(15)
+            .shadow(radius: 10)
+            .padding(40)
+        }
+    }
+}
+
 struct LungTechLogo: View {
     var body: some View {
         HStack(spacing: 10) {
-
             Text("LungTech")
                 .font(.system(size: 36, weight: .bold, design: .rounded))
                 .foregroundColor(.primary)
@@ -187,12 +239,13 @@ struct LungTechLogo: View {
         .padding()
     }
 }
+
 struct ActionButton: View {
     let title: String
     let icon: String
     let color: Color
     let action: () -> Void
-    
+
     var body: some View {
         Button(action: action) {
             VStack {
@@ -215,13 +268,13 @@ struct ActionButton: View {
 
 struct RecordingView: View {
     let countdown: Int
-    
+
     var body: some View {
         VStack {
             Text("Recording: \(countdown)s")
                 .font(.title2)
                 .foregroundColor(.orange)
-            
+
             Image(systemName: "waveform")
                 .font(.system(size: 50))
                 .foregroundColor(.orange)
