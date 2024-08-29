@@ -22,16 +22,8 @@ struct ContentView: View {
             mainView
                 .tabItem {
                     Image(systemName: "lungs.fill")
-                    Text("Screener")
                 }
                 .tag(0)
-
-            infoView
-                .tabItem {
-                    Image(systemName: "info.circle.fill")
-                    Text("Info")
-                }
-                .tag(1)
         }
         .accentColor(mainColor)
         .overlay(
@@ -55,7 +47,7 @@ struct ContentView: View {
                     VStack(spacing: 30) {
                         LungTechLogo()
 
-                        Text("Upload or record a cough sample for preliminary screening.")
+                        Text("Upload or record cough sounds to begin the screening.")
                             .font(.body)
                             .foregroundColor(.secondary)
                             .multilineTextAlignment(.center)
@@ -82,7 +74,7 @@ struct ContentView: View {
                         }
 
                         if let segmentedFileURL = segmentedFileURL {
-                            Text("File processed: \(segmentedFileURL)")
+                            Text("Last File Processed: \(segmentedFileURL)")
                                 .font(.caption)
                                 .foregroundColor(secondaryColor)
                                 .padding()
@@ -107,38 +99,15 @@ struct ContentView: View {
                 ResultView(onRetakeTest: {
                     showingResult = false
                     resetTest()
-                }, mainColor: mainColor)
+                })
             }
             .alert(isPresented: $showingInfo) {
                 Alert(
                     title: Text("About LungTech Screener"),
-                    message: Text("This app uses AI to analyze cough sounds and provide a preliminary screening for respiratory conditions. This is not a diagnostic tool and should not replace professional medical advice."),
-                    dismissButton: .default(Text("Got it!"))
+                    message: Text("This app uses AI to analyze cough recordings and give a rough screening for lung diseases. This is not a diagnostic tool and should not substitute professional medical advice."),
+                    dismissButton: .default(Text("I understand"))
                 )
             }
-        }
-    }
-
-    var infoView: some View {
-        NavigationView {
-            List {
-                Section(header: Text("About COPD").foregroundColor(mainColor)) {
-                    InfoRow(title: "What is COPD", value: "Chronic Obstructive Pulmonary Disease (COPD) is a chronic inflammatory lung disease that causes obstructed airflow from the lungs.")
-                    InfoRow(title: "Symptoms", value: "Breathing difficulty, cough, mucus production and wheezing.")
-                }
-
-                Section(header: Text("Risk Factors").foregroundColor(mainColor)) {
-                    InfoRow(title: "Smoking", value: "Primary risk factor for COPD")
-                    InfoRow(title: "Air Pollution", value: "Long-term exposure can contribute to COPD")
-                    InfoRow(title: "Occupational Exposure", value: "Dusts and chemicals in certain workplaces")
-                    InfoRow(title: "Genetics", value: "Some genetic factors may increase risk")
-                }
-
-                Section(header: Text("When to See a Doctor").foregroundColor(mainColor)) {
-                    InfoRow(title: "Consult a Professional", value: "If you experience persistent cough, shortness of breath, or any other symptoms of COPD.")
-                }
-            }
-            .navigationTitle("COPD Information")
         }
     }
 
@@ -202,7 +171,7 @@ struct CustomPermissionAlert: View {
                     .font(.headline)
                     .multilineTextAlignment(.center)
 
-                Text("LungTech needs microphone access to record cough samples for analysis.")
+                Text("LungTech needs the microphone access to record cough samples for analysis.")
                     .font(.body)
                     .multilineTextAlignment(.center)
 
@@ -303,7 +272,7 @@ struct ProcessingView: View {
 
 struct DisclaimerView: View {
     var body: some View {
-        Text("Disclaimer: This app is not a diagnostic tool. Please consult a healthcare professional for proper diagnosis and treatment.")
+        Text("Disclaimer: This app is not a diagnostic tool, only an intital screener. Please consult a healthcare professional for proper diagnosis and treatment.")
             .font(.caption)
             .foregroundColor(.secondary)
             .multilineTextAlignment(.center)
