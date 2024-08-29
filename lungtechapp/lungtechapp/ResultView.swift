@@ -5,6 +5,8 @@ import UniformTypeIdentifiers
 let mainColor = Color(red: 0.2, green: 0.5, blue: 0.8)
 let secondaryColor = Color(red: 0.3, green: 0.7, blue: 0.5)
 
+
+
 struct ResultView: View {
     var onRetakeTest: () -> Void
     @State private var showingInfoView = false
@@ -73,26 +75,27 @@ struct ResultView: View {
                         List {
                             Section(header: Text("About COPD").foregroundColor(mainColor)) {
                                 InfoRow(title: "What is COPD", value: "Chronic Obstructive Pulmonary Disease (COPD) is a chronic inflammatory lung disease that causes obstructed airflow from the lungs.")
-                                InfoRow(title: "Symptoms", value: "Breathing difficulty, cough, mucus production and wheezing.")
+                                InfoRow(title: "Symptoms", value: "Shortness of breath, wheezing, chest tightness.")
                             }
                             
                             Section(header: Text("Risk Factors").foregroundColor(mainColor)) {
-                                InfoRow(title: "Smoking", value: "Primary risk factor for COPD")
+                                InfoRow(title: "Smoke exposure", value: "Smoking, second-hand smoking, smoke exposure from wood or coal burning stove.")
                                 InfoRow(title: "Air Pollution", value: "Long-term exposure can contribute to COPD")
-                                InfoRow(title: "Occupational Exposure", value: "Dusts and chemicals in certain workplaces")
-                                InfoRow(title: "Genetics", value: "Some genetic factors may increase risk")
+                                InfoRow(title: "History", value: "People with a history of asthma")
+                                InfoRow(title: "Age", value: "Those who are age 40 and older as lung function declines as you age")
                             }
                             
                             Section(header: Text("When to See a Doctor").foregroundColor(mainColor)) {
                                 InfoRow(title: "Consult a Professional", value: "If you experience persistent cough, shortness of breath, or any other symptoms of COPD.")
                             }
                         }
-                        .navigationTitle("COPD Information")
+                        .navigationTitle("More about COPD")
                     }
                 )
             }
         }
     }
+    
     
     struct ResultCircle: View {
         var mainColor: Color
