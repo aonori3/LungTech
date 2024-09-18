@@ -13,6 +13,7 @@ struct ContentView: View {
     @State private var showingInfo = false
     @State private var selectedTab = 0
     @State private var showingPermissionAlert = false
+    @State private var predictionResult: String = ""
 
     let mainColor = Color(red: 0.2, green: 0.5, blue: 0.8)
     let secondaryColor = Color(red: 0.3, green: 0.7, blue: 0.5)
@@ -90,14 +91,14 @@ struct ContentView: View {
                     .foregroundColor(mainColor)
             })
             .sheet(isPresented: $showingDocumentPicker) {
-                DocumentPicker(selectedFileURL: $selectedFileURL)
-                    .onDisappear(perform: processAudioFile)
+                DocumentPicker(selectedFileURL: $selectedFileURL, predictionResult: $predictionResult)
+                .onDisappear(perform: processAudioFile)
             }
             .sheet(isPresented: $showingResult) {
                 ResultView(onRetakeTest: {
                     showingResult = false
                     resetTest()
-                })
+                }, predictionResult: $predictionResult)
             }
             .alert(isPresented: $showingInfo) {
                 Alert(
@@ -140,18 +141,7 @@ struct ContentView: View {
     }
 
     func processAudioFile() {
-        guard let selectedFileURL = selectedFileURL else { return }
         isProcessing = true
-
-        // Your existing processAudioFile logic here
-        // ...
-
-        // For demonstration, we'll just simulate a delay
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.segmentedFileURL = "processed_\(selectedFileURL.lastPathComponent)"
-            self.isProcessing = false
-            self.showingResult = true
-        }
     }
 }
 
