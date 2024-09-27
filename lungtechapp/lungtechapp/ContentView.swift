@@ -13,12 +13,13 @@ struct ContentView: View {
     @State private var isProcessing = false
     @State private var showingInfo = false
     @State private var selectedTab = 0
-    @State private var showingPermissionAlert = false
     @State private var predictionResult: String = ""
-
+    @State private var audioRecorder: AVAudioRecorder?
+    @State private var audioFilename: URL?
+    
     let mainColor = Color(red: 0.2, green: 0.5, blue: 0.8)
     let secondaryColor = Color(red: 0.3, green: 0.7, blue: 0.5)
-
+    
     var body: some View {
         TabView(selection: $selectedTab) {
             mainView
@@ -28,60 +29,51 @@ struct ContentView: View {
                 .tag(0)
         }
         .accentColor(mainColor)
-        .overlay(
-            Group {
-                if showingPermissionAlert {
-                    CustomPermissionAlert(isPresented: $showingPermissionAlert, onAllow: {
-                        startRecording()
-                    })
-                }
-            }
-        )
     }
-
+    
     var mainView: some View {
         NavigationView {
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [mainColor.opacity(0.1), secondaryColor.opacity(0.1)]), startPoint: .topLeading, endPoint: .bottomTrailing)
                     .edgesIgnoringSafeArea(.all)
-
+                
                 ScrollView {
                     VStack(spacing: 40) {
                         LungTechLogo()
-
+                        
                         Text("Upload or record cough sounds to begin the screening.")
                             .font(.body)
                             .foregroundColor(.secondary)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal)
-
+                        
                         HStack(spacing: 50) {
                             ActionButton(title: "Record", icon: "mic.fill", color: mainColor) {
-                                showingPermissionAlert = true
+                                startRecording()
                             }
                             .disabled(isRecording || isProcessing)
-
+                            
                             ActionButton(title: "Upload", icon: "arrow.up.doc.fill", color: mainColor) {
                                 showingDocumentPicker = true
                             }
                             .disabled(isRecording || isProcessing)
                         }
-
+                        
                         if isRecording {
                             RecordingView(countdown: countdown)
                         }
-
+                        
                         if isProcessing {
                             ProcessingView()
                         }
-
+                        
                         if let segmentedFileURL = segmentedFileURL {
                             Text("Last File Processed: \(segmentedFileURL)")
                                 .font(.caption)
                                 .foregroundColor(secondaryColor)
                                 .padding()
                         }
-
+                        
                         DisclaimerView()
                     }
                     .padding()
@@ -93,7 +85,6 @@ struct ContentView: View {
             })
             .sheet(isPresented: $showingDocumentPicker) {
                 DocumentPicker(selectedFileURL: $selectedFileURL, predictionResult: $predictionResult, showingResult: $showingResult)
-                .onDisappear(perform: processAudioFile)
             }
             .sheet(isPresented: $showingResult) {
                 ResultView(onRetakeTest: {
@@ -110,80 +101,113 @@ struct ContentView: View {
             }
         }
     }
-
+    
     func startRecording() {
-        isRecording = true
-        countdown = 5
-
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-            countdown -= 1
-            if countdown == 0 {
-                timer.invalidate()
-                stopRecording()
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setCategory(.playAndRecord, mode: .default)
+            try audioSession.setActive(true)
+            
+            let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            audioFilename = documents.appendingPathComponent("coughRecording.wav")
+            
+            let settings = [
+                AVFormatIDKey: Int(kAudioFormatLinearPCM),
+                AVSampleRateKey: 44100,
+                AVNumberOfChannelsKey: 1,
+                AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+            ]
+            
+            audioRecorder = try AVAudioRecorder(url: audioFilename!, settings: settings)
+            audioRecorder?.record(forDuration: 5)  // Recording for 5 seconds
+            
+            isRecording = true
+            countdown = 5
+            
+            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+                countdown -= 1
+                if countdown == 0 {
+                    timer.invalidate()
+                    stopRecording()
+                }
             }
+        } catch {
+            print("Recording failed")
         }
     }
 
     func stopRecording() {
+        audioRecorder?.stop()
         isRecording = false
         isProcessing = true
-        // Simulating processing time
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            isProcessing = false
-            showingResult = true
+        
+        // Process the recorded file
+        if let recordedFileURL = audioFilename {
+            processAudioFile(at: recordedFileURL)
         }
     }
-
+    
     func resetTest() {
         isRecording = false
         countdown = 5
         segmentedFileURL = nil
         isProcessing = false
     }
-
-    func processAudioFile() {
+    
+    func processAudioFile(at fileURL: URL) {
         isProcessing = true
+
+        do {
+            let audioData = try Data(contentsOf: fileURL)
+            // Call the global uploadAndProcessAudioFile function
+            uploadAndProcessAudioFile(audioData: audioData)
+        } catch {
+            print("Failed to load audio file")
+        }
     }
-}
+    
+    func uploadAndProcessAudioFile(audioData: Data) {
+        let url = URL(string: "https://processaudio-c7a5eb77df32.herokuapp.com/process-audio")!
 
-struct CustomPermissionAlert: View {
-    @Binding var isPresented: Bool
-    var onAllow: () -> Void
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        let boundary = UUID().uuidString
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        
+        var body = Data()
+        body.append("--\(boundary)\r\n".data(using: .utf8)!)
+        body.append("Content-Disposition: form-data; name=\"file\"; filename=\"audiofile.wav\"\r\n".data(using: .utf8)!)
+        body.append("Content-Type: audio/wav\r\n\r\n".data(using: .utf8)!)
+        body.append(audioData)
+        body.append("\r\n--\(boundary)--\r\n".data(using: .utf8)!)
 
-    var body: some View {
-        ZStack {
-            Color.black.opacity(0.4)
-                .edgesIgnoringSafeArea(.all)
+        request.httpBody = body
 
-            VStack(spacing: 20) {
-                Text("\"LungTech\" Would Like to Access the Microphone")
-                    .font(.headline)
-                    .multilineTextAlignment(.center)
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print("Error uploading file: \(error)")
+                return
+            }
 
-                Text("LungTech needs the microphone access to record cough samples for analysis.")
-                    .font(.body)
-                    .multilineTextAlignment(.center)
-
-                HStack(spacing: 20) {
-                    Button("Don't Allow") {
-                        isPresented = false
+            if let data = data {
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: String],
+                       let result = json["result"] {
+                        print("Prediction result: \(result)")
+                        DispatchQueue.main.async {
+                            self.predictionResult = result
+                            self.isProcessing = false
+                            self.showingResult = true
+                        }
                     }
-                    .foregroundColor(.blue)
-
-                    Button("OK") {
-                        isPresented = false
-                        onAllow()
-                    }
-                    .foregroundColor(.blue)
-                    .fontWeight(.bold)
+                } catch {
+                    print("Failed to parse response: \(error)")
                 }
             }
-            .padding()
-            .background(Color(UIColor.systemBackground))
-            .cornerRadius(15)
-            .shadow(radius: 10)
-            .padding(40)
         }
+
+        task.resume()
     }
 }
 
