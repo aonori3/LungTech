@@ -3,20 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D4B246BE2C75492600BEB8DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B246BD2C75492600BEB8DF /* ContentView.swift */; };
 		D4B246C02C75492700BEB8DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B246BF2C75492700BEB8DF /* Assets.xcassets */; };
 		D4B246C42C75492700BEB8DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B246C32C75492700BEB8DF /* Preview Assets.xcassets */; };
 		D4B246CE2C75492700BEB8DF /* lungtechappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B246CD2C75492700BEB8DF /* lungtechappTests.swift */; };
 		D4B246D82C75492700BEB8DF /* lungtechappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B246D72C75492700BEB8DF /* lungtechappUITests.swift */; };
 		D4B246DA2C75492700BEB8DF /* lungtechappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B246D92C75492700BEB8DF /* lungtechappUITestsLaunchTests.swift */; };
 		D4B246E92C7549A700BEB8DF /* LungTechApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B246E82C7549A700BEB8DF /* LungTechApp.swift */; };
-		D4B246EB2C7549C500BEB8DF /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B246EA2C7549C500BEB8DF /* ResultView.swift */; };
-		D4B246ED2C75929B00BEB8DF /* CoughClassifier.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = D4B246EC2C75929B00BEB8DF /* CoughClassifier.mlpackage */; };
-		D8A10EA92C77F67E009E3351 /* DocumentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A10EA82C77F67E009E3351 /* DocumentPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +35,6 @@
 /* Begin PBXFileReference section */
 		D42336602C80180500FE1ADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4B246B82C75492600BEB8DF /* lungtechapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lungtechapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4B246BD2C75492600BEB8DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D4B246BF2C75492700BEB8DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4B246C12C75492700BEB8DF /* lungtechapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lungtechapp.entitlements; sourceTree = "<group>"; };
 		D4B246C32C75492700BEB8DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -49,10 +44,13 @@
 		D4B246D72C75492700BEB8DF /* lungtechappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lungtechappUITests.swift; sourceTree = "<group>"; };
 		D4B246D92C75492700BEB8DF /* lungtechappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lungtechappUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D4B246E82C7549A700BEB8DF /* LungTechApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LungTechApp.swift; sourceTree = "<group>"; };
-		D4B246EA2C7549C500BEB8DF /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
-		D4B246EC2C75929B00BEB8DF /* CoughClassifier.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = CoughClassifier.mlpackage; sourceTree = "<group>"; };
-		D8A10EA82C77F67E009E3351 /* DocumentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D473EB692CA7475400181C31 /* Managers */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Managers; sourceTree = "<group>"; };
+		D473EB6B2CA7479500181C31 /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
+		D473EB702CA747CF00181C31 /* Resources */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Resources; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D4B246B52C75492600BEB8DF /* Frameworks */ = {
@@ -104,12 +102,11 @@
 			children = (
 				D42336602C80180500FE1ADF /* Info.plist */,
 				D4B246E82C7549A700BEB8DF /* LungTechApp.swift */,
-				D4B246BD2C75492600BEB8DF /* ContentView.swift */,
-				D8A10EA82C77F67E009E3351 /* DocumentPickerView.swift */,
-				D4B246EA2C7549C500BEB8DF /* ResultView.swift */,
+				D473EB692CA7475400181C31 /* Managers */,
+				D473EB6B2CA7479500181C31 /* Views */,
+				D473EB702CA747CF00181C31 /* Resources */,
 				D4B246BF2C75492700BEB8DF /* Assets.xcassets */,
 				D4B246C12C75492700BEB8DF /* lungtechapp.entitlements */,
-				D4B246EC2C75929B00BEB8DF /* CoughClassifier.mlpackage */,
 				D4B246C22C75492700BEB8DF /* Preview Content */,
 			);
 			path = lungtechapp;
@@ -154,6 +151,11 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D473EB692CA7475400181C31 /* Managers */,
+				D473EB6B2CA7479500181C31 /* Views */,
+				D473EB702CA747CF00181C31 /* Resources */,
 			);
 			name = lungtechapp;
 			productName = lungtechapp;
@@ -270,11 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4B246BE2C75492600BEB8DF /* ContentView.swift in Sources */,
-				D8A10EA92C77F67E009E3351 /* DocumentPickerView.swift in Sources */,
-				D4B246EB2C7549C500BEB8DF /* ResultView.swift in Sources */,
 				D4B246E92C7549A700BEB8DF /* LungTechApp.swift in Sources */,
-				D4B246ED2C75929B00BEB8DF /* CoughClassifier.mlpackage in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
