@@ -1,6 +1,7 @@
 import SwiftUI
 import UIKit
 import UniformTypeIdentifiers
+import AVFoundation
 
 struct ContentView: View {
     @State private var isRecording = false
@@ -91,7 +92,7 @@ struct ContentView: View {
                     .foregroundColor(mainColor)
             })
             .sheet(isPresented: $showingDocumentPicker) {
-                DocumentPicker(selectedFileURL: $selectedFileURL, predictionResult: $predictionResult)
+                DocumentPicker(selectedFileURL: $selectedFileURL, predictionResult: $predictionResult, showingResult: $showingResult)
                 .onDisappear(perform: processAudioFile)
             }
             .sheet(isPresented: $showingResult) {

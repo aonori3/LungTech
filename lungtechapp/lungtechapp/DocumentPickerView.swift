@@ -13,6 +13,7 @@ import AVFoundation
 struct DocumentPicker: UIViewControllerRepresentable {
     @Binding var selectedFileURL: URL?
     @Binding var predictionResult: String
+    @Binding var showingResult: Bool  // Add a binding for showing the result view
 
     class Coordinator: NSObject, UIDocumentPickerDelegate {
         var parent: DocumentPicker
@@ -35,7 +36,6 @@ struct DocumentPicker: UIViewControllerRepresentable {
             parent.uploadAndProcessAudioFile(audioData: audioData)
         }
     }
-
 
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
@@ -83,6 +83,7 @@ struct DocumentPicker: UIViewControllerRepresentable {
                         print("Prediction result: \(result)")
                         DispatchQueue.main.async {
                             self.predictionResult = result // Update the prediction result
+                            self.showingResult = true // Trigger showing the result view
                         }
                     }
                 } catch {
