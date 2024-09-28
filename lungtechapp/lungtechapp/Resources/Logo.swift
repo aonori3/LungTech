@@ -1,10 +1,3 @@
-//
-//  Logo.swift
-//  lungtechapp
-//
-//  Created by Aoi Otani on 2024/09/27.
-//
-
 import SwiftUI
 
 struct LungTechLogo: View {

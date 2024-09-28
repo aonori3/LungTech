@@ -7,8 +7,8 @@ struct ResultView: View {
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [ColorPalette.mainColor.opacity(0.1), ColorPalette.secondaryColor.opacity(0.1)]),
-                           startPoint: .topLeading,
-                           endPoint: .bottomTrailing)
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all)
             
             VStack(spacing: 50) {
@@ -29,9 +29,8 @@ struct ResultView: View {
                     .padding()
                     .background(Color.white.opacity(0.8))
                     .cornerRadius(15)
-                    .shadow(radius: 5)
                 } else {
-                    Text("No result available")
+                    Text("Result not available")
                         .font(.headline)
                         .foregroundColor(.secondary)
                 }
@@ -51,18 +50,19 @@ struct ResultView: View {
             .padding()
         }
     }
-    
     // Function to determine next steps based on the prediction result
     func nextSteps(for result: String) -> String {
         switch result.lowercased() {
-        case "normal":
-            return "No further action needed. Maintain a healthy lifestyle."
-        case "mild lung condition":
-            return "Consider consulting a general practitioner."
-        case "severe lung condition":
-            return "Urgent: Consult a pulmonologist immediately."
+        case "healthy":
+            return "No further action needed. Maintain a healthy lifestyle and continue regular check-ups."
+        case "copd":
+            return "Consult a pulmonologist for a comprehensive evaluation and management plan. Consider smoking cessation if applicable."
+        case "asthma":
+            return "Schedule an appointment with an allergist or pulmonologist to discuss treatment options and create an asthma action plan."
+        case "covid":
+            return "Isolate immediately and contact your healthcare provider or local health authorities for guidance on testing and treatment."
         default:
-            return "Consult a healthcare professional for further evaluation."
+            return "Consult a healthcare professional for further evaluation and proper diagnosis."
         }
     }
 }
