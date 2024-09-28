@@ -3,10 +3,7 @@ from tensorflow.keras.models import load_model
 import coremltools as ct
 
 def convert_to_coreml(model_path, output_path):
-    # Load your TensorFlow model
     model = load_model(model_path)
-
-    # Define the input shape
     input_shape = (1, 224, 224, 3)
 
     # Convert to Core ML
@@ -16,8 +13,7 @@ def convert_to_coreml(model_path, output_path):
         classifier_config=ct.ClassifierConfig(["healthy", "asthma", "copd", "covid"])
     )
 
-    # Save the Core ML model
     mlmodel.save(output_path)
 
 if __name__ == "__main__":
-    convert_to_coreml("path/to/your/model", "CoughClassifier.mlpackage")
+    convert_to_coreml("path/model", "CoughClassifier.mlpackage")
