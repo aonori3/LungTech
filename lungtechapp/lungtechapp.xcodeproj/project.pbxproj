@@ -3,11 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D4B246C02C75492700BEB8DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B246BF2C75492700BEB8DF /* Assets.xcassets */; };
+		D473EB7D2CA774BA00181C31 /* LungTechViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D473EB7B2CA774BA00181C31 /* LungTechViewModel.swift */; };
+		D473EB852CA774DE00181C31 /* AudioProcessingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D473EB7F2CA774DE00181C31 /* AudioProcessingManager.swift */; };
+		D473EB862CA774DE00181C31 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D473EB802CA774DE00181C31 /* AudioRecorder.swift */; };
+		D473EB872CA774DE00181C31 /* RecordingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D473EB812CA774DE00181C31 /* RecordingManager.swift */; };
+		D473EB882CA774DE00181C31 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D473EB832CA774DE00181C31 /* NetworkManager.swift */; };
+		D473EB932CA774E700181C31 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D473EB892CA774E700181C31 /* ActionButton.swift */; };
+		D473EB942CA774E700181C31 /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D473EB8A2CA774E700181C31 /* DisclaimerView.swift */; };
+		D473EB952CA774E700181C31 /* ProcessingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D473EB8B2CA774E700181C31 /* ProcessingView.swift */; };
+		D473EB962CA774E700181C31 /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D473EB8C2CA774E700181C31 /* RecordingView.swift */; };
+		D473EB972CA774E700181C31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D473EB8E2CA774E700181C31 /* ContentView.swift */; };
+		D473EB982CA774E700181C31 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D473EB8F2CA774E700181C31 /* MainView.swift */; };
+		D473EB992CA774E700181C31 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D473EB902CA774E700181C31 /* ResultView.swift */; };
+		D473EB9C2CA774EA00181C31 /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D473EB9A2CA774EA00181C31 /* DocumentPicker.swift */; };
+		D473EBA12CA774ED00181C31 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = D473EB9E2CA774ED00181C31 /* ColorPalette.swift */; };
+		D473EBA22CA774ED00181C31 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D473EB9F2CA774ED00181C31 /* Logo.swift */; };
+		D473EBA32CA774ED00181C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D473EB9D2CA774ED00181C31 /* Assets.xcassets */; };
 		D4B246C42C75492700BEB8DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B246C32C75492700BEB8DF /* Preview Assets.xcassets */; };
 		D4B246CE2C75492700BEB8DF /* lungtechappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B246CD2C75492700BEB8DF /* lungtechappTests.swift */; };
 		D4B246D82C75492700BEB8DF /* lungtechappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B246D72C75492700BEB8DF /* lungtechappUITests.swift */; };
@@ -34,8 +49,23 @@
 
 /* Begin PBXFileReference section */
 		D42336602C80180500FE1ADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D473EB7B2CA774BA00181C31 /* LungTechViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LungTechViewModel.swift; sourceTree = "<group>"; };
+		D473EB7F2CA774DE00181C31 /* AudioProcessingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioProcessingManager.swift; sourceTree = "<group>"; };
+		D473EB802CA774DE00181C31 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		D473EB812CA774DE00181C31 /* RecordingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingManager.swift; sourceTree = "<group>"; };
+		D473EB832CA774DE00181C31 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D473EB892CA774E700181C31 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		D473EB8A2CA774E700181C31 /* DisclaimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerView.swift; sourceTree = "<group>"; };
+		D473EB8B2CA774E700181C31 /* ProcessingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingView.swift; sourceTree = "<group>"; };
+		D473EB8C2CA774E700181C31 /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
+		D473EB8E2CA774E700181C31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D473EB8F2CA774E700181C31 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D473EB902CA774E700181C31 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		D473EB9A2CA774EA00181C31 /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
+		D473EB9D2CA774ED00181C31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D473EB9E2CA774ED00181C31 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		D473EB9F2CA774ED00181C31 /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		D4B246B82C75492600BEB8DF /* lungtechapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lungtechapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4B246BF2C75492700BEB8DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4B246C12C75492700BEB8DF /* lungtechapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lungtechapp.entitlements; sourceTree = "<group>"; };
 		D4B246C32C75492700BEB8DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D4B246C92C75492700BEB8DF /* lungtechappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lungtechappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,12 +75,6 @@
 		D4B246D92C75492700BEB8DF /* lungtechappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lungtechappUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D4B246E82C7549A700BEB8DF /* LungTechApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LungTechApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		D473EB692CA7475400181C31 /* Managers */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Managers; sourceTree = "<group>"; };
-		D473EB6B2CA7479500181C31 /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
-		D473EB702CA747CF00181C31 /* Resources */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Resources; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D4B246B52C75492600BEB8DF /* Frameworks */ = {
@@ -77,6 +101,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D473EB7C2CA774BA00181C31 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D473EB7B2CA774BA00181C31 /* LungTechViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D473EB822CA774DE00181C31 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				D473EB7F2CA774DE00181C31 /* AudioProcessingManager.swift */,
+				D473EB802CA774DE00181C31 /* AudioRecorder.swift */,
+				D473EB812CA774DE00181C31 /* RecordingManager.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		D473EB842CA774DE00181C31 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D473EB822CA774DE00181C31 /* Audio */,
+				D473EB832CA774DE00181C31 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D473EB8D2CA774E700181C31 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D473EB892CA774E700181C31 /* ActionButton.swift */,
+				D473EB8A2CA774E700181C31 /* DisclaimerView.swift */,
+				D473EB8B2CA774E700181C31 /* ProcessingView.swift */,
+				D473EB8C2CA774E700181C31 /* RecordingView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D473EB912CA774E700181C31 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D473EB8E2CA774E700181C31 /* ContentView.swift */,
+				D473EB8F2CA774E700181C31 /* MainView.swift */,
+				D473EB902CA774E700181C31 /* ResultView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D473EB922CA774E700181C31 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D473EB8D2CA774E700181C31 /* Components */,
+				D473EB912CA774E700181C31 /* Screens */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D473EB9B2CA774EA00181C31 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D473EB9A2CA774EA00181C31 /* DocumentPicker.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D473EBA02CA774ED00181C31 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D473EB9D2CA774ED00181C31 /* Assets.xcassets */,
+				D473EB9E2CA774ED00181C31 /* ColorPalette.swift */,
+				D473EB9F2CA774ED00181C31 /* Logo.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		D4B246AF2C75492600BEB8DF = {
 			isa = PBXGroup;
 			children = (
@@ -102,10 +201,11 @@
 			children = (
 				D42336602C80180500FE1ADF /* Info.plist */,
 				D4B246E82C7549A700BEB8DF /* LungTechApp.swift */,
-				D473EB692CA7475400181C31 /* Managers */,
-				D473EB6B2CA7479500181C31 /* Views */,
-				D473EB702CA747CF00181C31 /* Resources */,
-				D4B246BF2C75492700BEB8DF /* Assets.xcassets */,
+				D473EB7C2CA774BA00181C31 /* ViewModels */,
+				D473EB842CA774DE00181C31 /* Managers */,
+				D473EB922CA774E700181C31 /* Views */,
+				D473EB9B2CA774EA00181C31 /* Utilities */,
+				D473EBA02CA774ED00181C31 /* Resources */,
 				D4B246C12C75492700BEB8DF /* lungtechapp.entitlements */,
 				D4B246C22C75492700BEB8DF /* Preview Content */,
 			);
@@ -147,15 +247,11 @@
 				D4B246B42C75492600BEB8DF /* Sources */,
 				D4B246B52C75492600BEB8DF /* Frameworks */,
 				D4B246B62C75492600BEB8DF /* Resources */,
+				D473EBA42CA775C800181C31 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				D473EB692CA7475400181C31 /* Managers */,
-				D473EB6B2CA7479500181C31 /* Views */,
-				D473EB702CA747CF00181C31 /* Resources */,
 			);
 			name = lungtechapp;
 			productName = lungtechapp;
@@ -246,8 +342,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D473EBA32CA774ED00181C31 /* Assets.xcassets in Resources */,
 				D4B246C42C75492700BEB8DF /* Preview Assets.xcassets in Resources */,
-				D4B246C02C75492700BEB8DF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,12 +363,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D473EBA42CA775C800181C31 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif command -v swiftlint >/dev/null 2>&1; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed. Download from https://github.com/realm/SwiftLint.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D4B246B42C75492600BEB8DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D473EB932CA774E700181C31 /* ActionButton.swift in Sources */,
+				D473EB942CA774E700181C31 /* DisclaimerView.swift in Sources */,
+				D473EB952CA774E700181C31 /* ProcessingView.swift in Sources */,
+				D473EB962CA774E700181C31 /* RecordingView.swift in Sources */,
+				D473EBA12CA774ED00181C31 /* ColorPalette.swift in Sources */,
+				D473EBA22CA774ED00181C31 /* Logo.swift in Sources */,
+				D473EB972CA774E700181C31 /* ContentView.swift in Sources */,
+				D473EB982CA774E700181C31 /* MainView.swift in Sources */,
+				D473EB992CA774E700181C31 /* ResultView.swift in Sources */,
+				D473EB7D2CA774BA00181C31 /* LungTechViewModel.swift in Sources */,
 				D4B246E92C7549A700BEB8DF /* LungTechApp.swift in Sources */,
+				D473EB852CA774DE00181C31 /* AudioProcessingManager.swift in Sources */,
+				D473EB862CA774DE00181C31 /* AudioRecorder.swift in Sources */,
+				D473EB9C2CA774EA00181C31 /* DocumentPicker.swift in Sources */,
+				D473EB872CA774DE00181C31 /* RecordingManager.swift in Sources */,
+				D473EB882CA774DE00181C31 /* NetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
