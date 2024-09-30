@@ -23,10 +23,6 @@
 		D473EBA12CA774ED00181C31 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = D473EB9E2CA774ED00181C31 /* ColorPalette.swift */; };
 		D473EBA22CA774ED00181C31 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D473EB9F2CA774ED00181C31 /* Logo.swift */; };
 		D473EBA32CA774ED00181C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D473EB9D2CA774ED00181C31 /* Assets.xcassets */; };
-		D4B246C42C75492700BEB8DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B246C32C75492700BEB8DF /* Preview Assets.xcassets */; };
-		D4B246CE2C75492700BEB8DF /* lungtechappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B246CD2C75492700BEB8DF /* lungtechappTests.swift */; };
-		D4B246D82C75492700BEB8DF /* lungtechappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B246D72C75492700BEB8DF /* lungtechappUITests.swift */; };
-		D4B246DA2C75492700BEB8DF /* lungtechappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B246D92C75492700BEB8DF /* lungtechappUITestsLaunchTests.swift */; };
 		D4B246E92C7549A700BEB8DF /* LungTechApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B246E82C7549A700BEB8DF /* LungTechApp.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,12 +63,8 @@
 		D473EB9F2CA774ED00181C31 /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		D4B246B82C75492600BEB8DF /* lungtechapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lungtechapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B246C12C75492700BEB8DF /* lungtechapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lungtechapp.entitlements; sourceTree = "<group>"; };
-		D4B246C32C75492700BEB8DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D4B246C92C75492700BEB8DF /* lungtechappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lungtechappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4B246CD2C75492700BEB8DF /* lungtechappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lungtechappTests.swift; sourceTree = "<group>"; };
 		D4B246D32C75492700BEB8DF /* lungtechappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lungtechappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4B246D72C75492700BEB8DF /* lungtechappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lungtechappUITests.swift; sourceTree = "<group>"; };
-		D4B246D92C75492700BEB8DF /* lungtechappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lungtechappUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D4B246E82C7549A700BEB8DF /* LungTechApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LungTechApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,8 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				D4B246BA2C75492600BEB8DF /* lungtechapp */,
-				D4B246CC2C75492700BEB8DF /* lungtechappTests */,
-				D4B246D62C75492700BEB8DF /* lungtechappUITests */,
 				D4B246B92C75492600BEB8DF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -207,34 +197,8 @@
 				D473EB9B2CA774EA00181C31 /* Utilities */,
 				D473EBA02CA774ED00181C31 /* Resources */,
 				D4B246C12C75492700BEB8DF /* lungtechapp.entitlements */,
-				D4B246C22C75492700BEB8DF /* Preview Content */,
 			);
 			path = lungtechapp;
-			sourceTree = "<group>";
-		};
-		D4B246C22C75492700BEB8DF /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				D4B246C32C75492700BEB8DF /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		D4B246CC2C75492700BEB8DF /* lungtechappTests */ = {
-			isa = PBXGroup;
-			children = (
-				D4B246CD2C75492700BEB8DF /* lungtechappTests.swift */,
-			);
-			path = lungtechappTests;
-			sourceTree = "<group>";
-		};
-		D4B246D62C75492700BEB8DF /* lungtechappUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D4B246D72C75492700BEB8DF /* lungtechappUITests.swift */,
-				D4B246D92C75492700BEB8DF /* lungtechappUITestsLaunchTests.swift */,
-			);
-			path = lungtechappUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,7 +307,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D473EBA32CA774ED00181C31 /* Assets.xcassets in Resources */,
-				D4B246C42C75492700BEB8DF /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +374,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4B246CE2C75492700BEB8DF /* lungtechappTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,8 +381,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4B246DA2C75492700BEB8DF /* lungtechappUITestsLaunchTests.swift in Sources */,
-				D4B246D82C75492700BEB8DF /* lungtechappUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,7 +522,7 @@
 				CODE_SIGN_ENTITLEMENTS = lungtechapp/lungtechapp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"lungtechapp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = K8D7XFC993;
 				ENABLE_HARDENED_RUNTIME = YES;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
@@ -603,7 +563,7 @@
 				CODE_SIGN_ENTITLEMENTS = lungtechapp/lungtechapp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"lungtechapp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = K8D7XFC993;
 				ENABLE_HARDENED_RUNTIME = YES;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
@@ -639,7 +599,6 @@
 		D4B246E12C75492700BEB8DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -662,7 +621,6 @@
 		D4B246E22C75492700BEB8DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -685,7 +643,6 @@
 		D4B246E42C75492700BEB8DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K8D7XFC993;
@@ -707,7 +664,6 @@
 		D4B246E52C75492700BEB8DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K8D7XFC993;
