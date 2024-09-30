@@ -160,14 +160,6 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		D473EBA02CA774ED00181C31 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				D473EB9D2CA774ED00181C31 /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		D473EBA52CAA3F5300181C31 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +177,7 @@
 				D473EB9B2CA774EA00181C31 /* Utilities */,
 				D473EB922CA774E700181C31 /* Views */,
 				D473EB7C2CA774BA00181C31 /* ViewModels */,
+				D473EB9D2CA774ED00181C31 /* Assets.xcassets */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -212,7 +205,6 @@
 			children = (
 				D473EBA52CAA3F5300181C31 /* App */,
 				D473EBA62CAA3F7200181C31 /* src */,
-				D473EBA02CA774ED00181C31 /* Resources */,
 			);
 			path = lungtechapp;
 			sourceTree = "<group>";
