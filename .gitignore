@@ -17,6 +17,7 @@ xcuserdata/
 *.moved-aside
 *.xcuserstate
 *.xcworkspace
+*.ipynb_checkpoints
 
 # Swift Package Manager
 .build/
